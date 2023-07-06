@@ -9,7 +9,7 @@ import java.util.List;
 @Setter
 @Getter
 @Entity
-@Table(name="Student_tbl")
+@Table
 public class Student {
     @Id
     @GeneratedValue
@@ -19,9 +19,6 @@ public class Student {
     private String address;
     private String city;
 
-//    @OneToMany(targetEntity = Teacher.class ,cascade = CascadeType.ALL)
-//    @JoinColumn(name="teacher_id" ,referencedColumnName = "stdId")
-//    private List<Teacher> teachers;
 
     @OneToMany(targetEntity = Teacher.class,cascade = CascadeType.ALL)
     @JoinColumn(name="student_id", referencedColumnName = "stdId")

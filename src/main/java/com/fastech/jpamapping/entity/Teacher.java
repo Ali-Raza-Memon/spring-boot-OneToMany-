@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Setter
 @Getter
 @Entity
-@Table(name="Teacher_tbl")
+@Table
 public class Teacher {
     @Id
     private int teacherId;
@@ -20,6 +20,5 @@ public class Teacher {
     private String email;
     private String address;
     private String city;
-
 
 }
